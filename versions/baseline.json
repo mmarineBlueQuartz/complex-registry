@@ -7,6 +7,10 @@
     "eigen3": {
       "baseline": "3.3.9",
       "port-version": 0
+    },
+    "expected-lite": {
+      "baseline": "0.5.0",
+      "port-version": 0
     }
   }
 }
