@@ -1,3 +1,8 @@
 {
-  "default": {}
+  "default": {
+    "catch2": {
+      "baseline": "2.13.6",
+      "port-version": 0
+    }
+  }
 }
