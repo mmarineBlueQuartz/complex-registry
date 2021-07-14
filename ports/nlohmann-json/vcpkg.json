@@ -1,0 +1,7 @@
+{
+  "name": "nlohmann-json",
+  "version": "3.9.1",
+  "port-version": 0,
+  "description": "JSON for Modern C++",
+  "homepage": "https://github.com/nlohmann/json"
+}
