@@ -27,6 +27,10 @@
     "pybind11": {
       "baseline": "2.6.2",
       "port-version": 0
+    },
+    "span-lite": {
+      "baseline": "0.10.3",
+      "port-version": 0
     }
   }
 }
