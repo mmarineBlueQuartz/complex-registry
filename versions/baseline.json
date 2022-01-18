@@ -36,6 +36,10 @@
       "baseline": "0.10.3",
       "port-version": 0
     },
+    "tbb": {
+      "baseline": "2021.4.0",
+      "port-version": 0
+    },
     "vcpkg-cmake": {
       "baseline": "2021-02-28",
       "port-version": 0
