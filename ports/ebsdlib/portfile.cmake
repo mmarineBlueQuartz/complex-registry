@@ -1,0 +1,29 @@
+vcpkg_from_github(
+  OUT_SOURCE_PATH SOURCE_PATH
+  REPO bluequartzsoftware/ebsdlib
+  REF v1.0.8
+  SHA512 77b6e595b2f45afa1568f2a693db9b595ee8726a82235002c01aa53d2ee70002e49e98c27419425adcb9e86adc0888703290341a959931dce6bc6f880100f691
+  HEAD_REF develop
+)
+
+vcpkg_configure_cmake(
+  SOURCE_PATH "${SOURCE_PATH}"
+  PREFER_NINJA
+  OPTIONS
+    -DDREAM3D_ANACONDA=ON
+    -DCMP_TBB_ENABLE_COPY_INSTALL=OFF
+    -DEbsdLib_ENABLE_TESTING=OFF
+    -DEbsdLib_BUILD_TOOLS=OFF
+    -DEbsdLib_ENABLE_HDF5=ON
+    -DEbsdLib_CMAKE_CONFIG_INSTALL_DIR=share/${PORT}
+    -DTBB_STATUS_PRINTED=ON
+  MAYBE_UNUSED_VARIABLES
+    CMP_TBB_ENABLE_COPY_INSTALL
+)
+
+vcpkg_install_cmake()
+
+vcpkg_fixup_cmake_targets()
+
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
