@@ -21,6 +21,8 @@ vcpkg_install_cmake()
 
 vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/TBB)
 
+vcpkg_copy_pdbs()
+
 file(COPY ${CMAKE_CURRENT_LIST_DIR}/usage DESTINATION ${CURRENT_PACKAGES_DIR}/share/tbb)
 
 file(INSTALL ${SOURCE_PATH}/LICENSE.txt DESTINATION ${CURRENT_PACKAGES_DIR}/share/tbb RENAME copyright)
