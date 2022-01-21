@@ -10,11 +10,14 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
+vcpkg_find_acquire_program(GIT)
+
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     PREFER_NINJA
     OPTIONS
         -DBUILD_TESTING=OFF
+        -DGIT_EXECUTABLE=${GIT}
 )
 
 vcpkg_install_cmake()
