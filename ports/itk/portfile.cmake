@@ -8,10 +8,13 @@ vcpkg_from_github(
   HEAD_REF master
 )
 
+vcpkg_find_acquire_program(GIT)
+
 vcpkg_configure_cmake(
   SOURCE_PATH "${SOURCE_PATH}"
   DISABLE_PARALLEL_CONFIGURE
   OPTIONS
+    -DGIT_EXECUTABLE=${GIT}
     -DBUILD_TESTING:BOOL=OFF
     -DBUILD_EXAMPLES:BOOL=OFF
     -DBUILD_PKGCONFIG_FILES:BOOL=OFF
