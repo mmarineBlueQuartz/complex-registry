@@ -1,0 +1,23 @@
+vcpkg_from_github(
+  OUT_SOURCE_PATH SOURCE_PATH
+  REPO fr00b0/nod
+  REF v0.5.2
+  SHA512 76195a3b0da30da9ea942d141b10228d4681f9a03085eeb5c26333ed7af5ece5689f6b6fbcbaf08c4084f426874a52a32a4562002c65c8da4bf15032dbafdad1
+  HEAD_REF master
+)
+
+file(COPY "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" DESTINATION "${SOURCE_PATH}")
+
+vcpkg_configure_cmake(
+  SOURCE_PATH ${SOURCE_PATH}
+  PREFER_NINJA
+)
+
+vcpkg_install_cmake()
+
+file(REMOVE_RECURSE
+  ${CURRENT_PACKAGES_DIR}/debug
+  ${CURRENT_PACKAGES_DIR}/lib
+)
+
+file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)

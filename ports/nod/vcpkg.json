@@ -1,0 +1,7 @@
+{
+  "name": "nod",
+  "version": "0.5.2",
+  "port-version": 0,
+  "description": "Small, header only signals and slots C++11 library.",
+  "homepage": "https://github.com/fr00b0/nod"
+}
