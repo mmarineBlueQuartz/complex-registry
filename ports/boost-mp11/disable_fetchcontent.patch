@@ -1,0 +1,31 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 12de015..77527ef 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -16,18 +16,18 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+ 
+   # Fetch support files
+ 
+-  message(STATUS "Fetching BoostFetch.cmake")
++  # message(STATUS "Fetching BoostFetch.cmake")
+ 
+-  file(DOWNLOAD
+-    "https://raw.githubusercontent.com/boostorg/cmake/develop/include/BoostFetch.cmake"
+-    "${CMAKE_BINARY_DIR}/fetch_and_include/BoostFetch.cmake"
+-  )
++  # file(DOWNLOAD
++  #   "https://raw.githubusercontent.com/boostorg/cmake/develop/include/BoostFetch.cmake"
++  #   "${CMAKE_BINARY_DIR}/fetch_and_include/BoostFetch.cmake"
++  # )
+ 
+-  include("${CMAKE_BINARY_DIR}/fetch_and_include/BoostFetch.cmake")
++  # include("${CMAKE_BINARY_DIR}/fetch_and_include/BoostFetch.cmake")
+ 
+-  boost_fetch(boostorg/cmake TAG develop NO_ADD_SUBDIR)
++  # boost_fetch(boostorg/cmake TAG develop NO_ADD_SUBDIR)
+ 
+-  FetchContent_GetProperties(boostorg_cmake)
++  # FetchContent_GetProperties(boostorg_cmake)
+ 
+   list(APPEND CMAKE_MODULE_PATH ${boostorg_cmake_SOURCE_DIR}/include)
+ 

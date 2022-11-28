@@ -1,7 +1,7 @@
 {
   "name": "boost-mp11",
   "version": "1.77.0",
-  "port-version": 2,
+  "port-version": 3,
   "description": "Boost mp11 module",
   "homepage": "https://github.com/boostorg/mp11"
 }
