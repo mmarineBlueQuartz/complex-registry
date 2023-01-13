@@ -48,10 +48,14 @@ vcpkg_configure_cmake(
     -DModule_ITKConvolution:BOOL=ON
     -DModule_ITKDenoising:BOOL=ON
     -DModule_ITKImageNoise:BOOL=ON
-    -DModule_Montage:BOOL=ON
-    -DModule_Montage_GIT_TAG:STRING=v0.7.3
-    -DModule_TotalVariation:BOOL=ON
-    -DModule_TotalVariation_GIT_TAG:STRING=v0.2.1
+
+    # Disabled these modules for the moment due to FetchContent dependency
+    # Additionally TotalVariation depends on proxtv which incorrectly lists some optional dependencies as required when installed
+
+    # -DModule_Montage:BOOL=ON
+    # -DModule_Montage_GIT_TAG:STRING=v0.7.3
+    # -DModule_TotalVariation:BOOL=ON
+    # -DModule_TotalVariation_GIT_TAG:STRING=v0.2.1
   OPTIONS_DEBUG
     -DCMAKE_DEBUG_POSTFIX:STRING=_d
 )
@@ -62,11 +66,11 @@ vcpkg_copy_pdbs()
 
 vcpkg_fixup_cmake_targets()
 
-vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/share/${PORT}/Modules/TotalVariation.cmake" "set(Eigen3_DIR \"\${_IMPORT_PREFIX}/share/eigen3\")" "set(Eigen3_DIR \"\${ITK_INSTALL_PREFIX}/share/eigen3\")")
-vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/share/${PORT}/Modules/TotalVariation.cmake" "set(proxTV_DIR \"${CURRENT_PACKAGES_DIR}/share/itk/Modules\")" "set(proxTV_DIR \"\${ITK_INSTALL_PREFIX}/share/itk/Modules\")")
+# vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/share/${PORT}/Modules/TotalVariation.cmake" "set(Eigen3_DIR \"\${_IMPORT_PREFIX}/share/eigen3\")" "set(Eigen3_DIR \"\${ITK_INSTALL_PREFIX}/share/eigen3\")")
+# vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/share/${PORT}/Modules/TotalVariation.cmake" "set(proxTV_DIR \"${CURRENT_PACKAGES_DIR}/share/itk/Modules\")" "set(proxTV_DIR \"\${ITK_INSTALL_PREFIX}/share/itk/Modules\")")
 
-set(IMPORT_PREFIX_LINE "get_filename_component(_IMPORT_PREFIX \"\${_IMPORT_PREFIX}\" PATH)")
-vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/share/${PORT}/Modules/proxTVTargets.cmake" "get_filename_component(_IMPORT_PREFIX \"\${CMAKE_CURRENT_LIST_FILE}\" PATH)\n${IMPORT_PREFIX_LINE}\n${IMPORT_PREFIX_LINE}" "get_filename_component(_IMPORT_PREFIX \"\${CMAKE_CURRENT_LIST_FILE}\" PATH)\n${IMPORT_PREFIX_LINE}\n${IMPORT_PREFIX_LINE}\n${IMPORT_PREFIX_LINE}")
+# set(IMPORT_PREFIX_LINE "get_filename_component(_IMPORT_PREFIX \"\${_IMPORT_PREFIX}\" PATH)")
+# vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/share/${PORT}/Modules/proxTVTargets.cmake" "get_filename_component(_IMPORT_PREFIX \"\${CMAKE_CURRENT_LIST_FILE}\" PATH)\n${IMPORT_PREFIX_LINE}\n${IMPORT_PREFIX_LINE}" "get_filename_component(_IMPORT_PREFIX \"\${CMAKE_CURRENT_LIST_FILE}\" PATH)\n${IMPORT_PREFIX_LINE}\n${IMPORT_PREFIX_LINE}\n${IMPORT_PREFIX_LINE}")
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
