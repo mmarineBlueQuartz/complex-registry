@@ -56,6 +56,10 @@
       "baseline": "2021.4.0",
       "port-version": 1
     },
+    "reproc": {
+      "baseline": "14.2.4",
+      "port-version": 0
+    },
     "vcpkg-cmake": {
       "baseline": "2022-10-30",
       "port-version": 0
