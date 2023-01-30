@@ -1,0 +1,24 @@
+{
+  "name": "nxcommon",
+  "version": "0.1.0",
+  "port-version": 0,
+  "description": "Library defining common types for between NX libraries.",
+  "homepage": "https://github.com/bluequartzsoftware/nxcommon",
+  "dependencies": [
+    {
+      "name": "fmt"
+    },
+    {
+      "name": "nlohmann-json"
+    },
+    {
+      "name": "expected-lite"
+    },
+    {
+      "name": "span-lite"
+    },
+    {
+      "name": "tbb"
+    }
+  ]
+}

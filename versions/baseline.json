@@ -44,6 +44,10 @@
       "baseline": "0.5.2",
       "port-version": 0
     },
+    "nxcommon": {
+      "baseline": "0.1.0",
+      "port-version": 0
+    },
     "pybind11": {
       "baseline": "2.10.0",
       "port-version": 0
