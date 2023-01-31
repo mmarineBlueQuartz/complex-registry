@@ -1,0 +1,30 @@
+{
+  "name": "nxh5support",
+  "version": "0.1.0",
+  "port-version": 0,
+  "description": "C++ library with simplified HDF5 IO for use in NX libraries.",
+  "homepage": "https://github.com/bluequartzsoftware/nxh5support",
+  "dependencies": [
+    {
+      "name": "fmt"
+    },
+    {
+      "name": "nlohmann-json"
+    },
+    {
+      "name": "expected-lite"
+    },
+    {
+      "name": "hdf5",
+      "features": [
+        "cpp"
+      ]
+    },
+    {
+      "name": "nxcommon"
+    },
+    {
+      "name": "span-lite"
+    }
+  ]
+}

@@ -48,6 +48,10 @@
       "baseline": "0.1.0",
       "port-version": 0
     },
+    "nxh5support": {
+      "baseline": "0.1.0",
+      "port-version": 0
+    },
     "pybind11": {
       "baseline": "2.10.0",
       "port-version": 0
