@@ -2,7 +2,7 @@ vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO bluequartzsoftware/nxcommon
   REF v0.1.0
-  SHA512 45f43319652474aace5a77f25ee5a1b3ceb13924591b564b4badcdd731885a4b49702d45ab559468c7c0dbf3380fc96d34bf6e8d6050213a4d6ff4560d9bc8c6
+  SHA512 d60758f9cbc4db3a6c32391a407b2bedd905d28bd9875592a6e08c1448b30a4ede0dfbcd65f80a221ba28bb3d0deec9c5ed13a7e76c2f5d9cd1dcbf2b62d935d
   HEAD_REF develop
 )
 
