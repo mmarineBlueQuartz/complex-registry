@@ -60,6 +60,10 @@
       "baseline": "2.10.0",
       "port-version": 0
     },
+    "snappy": {
+      "baseline": "1.1.9",
+      "port-version": 0
+    },
     "span-lite": {
       "baseline": "0.10.3",
       "port-version": 0
