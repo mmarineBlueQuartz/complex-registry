@@ -83,6 +83,10 @@
     "vcpkg-cmake-config": {
       "baseline": "2022-02-06",
       "port-version": 0
+    },
+    "zlib": {
+      "baseline": "1.2.13",
+      "port-version": 0
     }
   }
 }
