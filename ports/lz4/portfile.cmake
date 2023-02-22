@@ -30,10 +30,6 @@ foreach(FILE lz4.h lz4frame.h)
 endforeach()
 
 vcpkg_cmake_config_fixup()
-vcpkg_fixup_pkgconfig()
-if(NOT DEFINED VCPKG_BUILD_TYPE OR VCPKG_BUILD_TYPE STREQUAL "debug")
-    vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/liblz4.pc" " -llz4" " -llz4d")
-endif()
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
