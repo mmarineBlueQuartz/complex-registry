@@ -90,7 +90,7 @@
     },
     "zlib": {
       "baseline": "1.2.13",
-      "port-version": 0
+      "port-version": 1
     },
     "zstd": {
       "baseline": "1.5.2",
