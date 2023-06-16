@@ -1,0 +1,7 @@
+{
+  "name": "randlib",
+  "version": "1.0.0",
+  "port-version": 0,
+  "description": "A library designed to facilitate work with probability, statistics and stochastic calculus",
+  "homepage": "https://github.com/BlueQuartzSoftware/RandLib"
+}
