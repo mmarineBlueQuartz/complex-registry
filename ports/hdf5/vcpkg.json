@@ -1,9 +1,10 @@
 {
   "name": "hdf5",
-  "version": "1.12.0",
-  "port-version": 0,
+  "version": "1.14.0",
+  "port-version": 1,
   "description": "HDF5 is a data model, library, and file format for storing and managing data",
   "homepage": "https://www.hdfgroup.org/downloads/hdf5/",
+  "license": "BSD-3-Clause",
   "supports": "!uwp",
   "dependencies": [
     {
@@ -16,6 +17,8 @@
     }
   ],
   "default-features": [
+    "szip",
+    "zlib"
   ],
   "features": {
     "cpp": {
@@ -23,6 +26,9 @@
     },
     "fortran": {
       "description": "Build with fortran"
+    },
+    "map": {
+      "description": "Build the map API"
     },
     "parallel": {
       "description": "parallel support for HDF5",
@@ -38,12 +44,19 @@
     },
     "threadsafe": {
       "description": "thread safety for HDF5",
+      "supports": "!(static & windows)",
       "dependencies": [
-        "pthreads"
+        {
+          "name": "pthreads",
+          "platform": "!windows"
+        }
       ]
     },
     "tools": {
       "description": "Build hdf tools"
+    },
+    "utils": {
+      "description": "Build HDF5 Utils"
     },
     "zlib": {
       "description": "Build with zlib",
